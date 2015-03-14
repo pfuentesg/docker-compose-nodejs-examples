@@ -1,0 +1,38 @@
+
+
+server1: 
+  image: nodesource/node:trusty
+  volumes:
+    - ..:/app
+    - logs/server1:/var/log
+  working_dir: /app
+  ports:
+    - "3001:3001"
+  environment:
+    - PORT=3001
+    - SERVER_NAME=server1
+  command: node echo-server/server.js
+ 
+server2: 
+  image: nodesource/node:trusty
+  volumes:
+    - ..:/app
+    - logs/server2:/var/log
+  working_dir: /app
+  environment:
+    - PORT=3002
+    - SERVER_NAME=server2
+  ports:
+    - "3002:3002"
+  command: node echo-server/server.js
+
+nginx:
+  image: dockerfile/nginx
+  links:
+    - server1
+    - server2
+  volumes:
+    - config:/etc/nginx/sites-enabled
+    - logs/nginx:/var/log/nginx
+  ports:
+    - "80:80"

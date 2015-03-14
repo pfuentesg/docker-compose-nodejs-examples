@@ -1,0 +1,25 @@
+{
+  "name": "docker-compose-nodejs-examples",
+  "version": "1.0.0",
+  "description": "A collection of dockerized node examples.",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.9.0",
+    "restify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node echo-server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guumaster/docker-compose-nodejs-examples.git"
+  },
+  "author": "guumaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guumaster/docker-compose-nodejs-examples/issues"
+  }
+}
