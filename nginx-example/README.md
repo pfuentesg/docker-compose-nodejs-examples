@@ -13,7 +13,7 @@ Read examples root [README.md](https://github.com/guumaster/docker-compose-nodej
     127.0.0.1 server1.local
     127.0.0.1 server2.local
 
- Clone the repo and run fig (go get a coffee)
+ Clone the repo and run docker-compose (if you are running it for the first time, go get a coffee)
  
 ```sh 
     docker-compose up -d
