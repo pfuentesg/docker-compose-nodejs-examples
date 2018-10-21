@@ -1,6 +1,6 @@
 
 
-server1: 
+holi1: 
   image: nodesource/node:trusty
   volumes:
     - ..:/app
@@ -13,7 +13,7 @@ server1:
     - SERVER_NAME=server1
   command: node echo-server/server.js
  
-server2: 
+holi2: 
   image: nodesource/node:trusty
   volumes:
     - ..:/app
